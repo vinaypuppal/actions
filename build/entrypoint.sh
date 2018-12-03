@@ -25,7 +25,7 @@ else
     --data-binary @args.json \
     "https://api.netlify.com/api/v1/github/$GITHUB_REPOSITORY/build"
   ) 2>&1
-  
+  echo "URL: https://api.netlify.com/api/v1/github/$GITHUB_REPOSITORY/build"
   echo "Status code $code"
   if [ ! 204 -eq "$code" ] && [ ! 200 -eq "$code" ]; then
     exit 1
